@@ -12,9 +12,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
 
 import org.palladiosimulator.pcmtx.Database;
 import org.palladiosimulator.pcmtx.EntityType;
@@ -36,7 +37,7 @@ import org.palladiosimulator.pcmtx.Table;
  *
  * @generated
  */
-public class TableImpl extends MinimalEObjectImpl.Container implements Table {
+public class TableImpl extends EntityImpl implements Table {
 	/**
 	 * The default value of the '{@link #getRows() <em>Rows</em>}' attribute.
 	 * <!-- begin-user-doc -->

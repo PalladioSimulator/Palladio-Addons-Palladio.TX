@@ -11,10 +11,10 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
 
 import org.palladiosimulator.pcmtx.DataRepository;
 import org.palladiosimulator.pcmtx.Database;
@@ -35,7 +35,7 @@ import org.palladiosimulator.pcmtx.Table;
  *
  * @generated
  */
-public class DataRepositoryImpl extends MinimalEObjectImpl.Container implements DataRepository {
+public class DataRepositoryImpl extends EntityImpl implements DataRepository {
 	/**
 	 * The cached value of the '{@link #getTable() <em>Table</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.palladiosimulator.pcm.PcmPackage;
 
+import org.palladiosimulator.pcm.core.entity.EntityPackage;
+
 import org.palladiosimulator.pcm.resourcetype.ResourcetypePackage;
 
 import org.palladiosimulator.pcm.seff.SeffPackage;
@@ -366,6 +368,7 @@ public class PcmtxPackageImpl extends EPackageImpl implements PcmtxPackage {
 
 		// Obtain other dependent packages
 		ResourcetypePackage theResourcetypePackage = (ResourcetypePackage)EPackage.Registry.INSTANCE.getEPackage(ResourcetypePackage.eNS_URI);
+		EntityPackage theEntityPackage = (EntityPackage)EPackage.Registry.INSTANCE.getEPackage(EntityPackage.eNS_URI);
 		SeffPackage theSeffPackage = (SeffPackage)EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI);
 
 		// Create type parameters
@@ -374,6 +377,9 @@ public class PcmtxPackageImpl extends EPackageImpl implements PcmtxPackage {
 
 		// Add supertypes to classes
 		entityTypeEClass.getESuperTypes().add(theResourcetypePackage.getResourceType());
+		dataRepositoryEClass.getESuperTypes().add(theEntityPackage.getEntity());
+		tableEClass.getESuperTypes().add(theEntityPackage.getEntity());
+		databaseEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		commitActionEClass.getESuperTypes().add(theSeffPackage.getAbstractInternalControlFlowAction());
 		abortActionEClass.getESuperTypes().add(theSeffPackage.getAbstractInternalControlFlowAction());
 

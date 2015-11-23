@@ -6,6 +6,8 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
+import org.palladiosimulator.pcm.core.entity.Entity;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Data Repository</b></em>'.
@@ -23,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface DataRepository extends EObject {
+public interface DataRepository extends EObject, Entity {
 	/**
 	 * Returns the value of the '<em><b>Table</b></em>' containment reference list.
 	 * The list contents are of type {@link org.palladiosimulator.pcmtx.Table}.

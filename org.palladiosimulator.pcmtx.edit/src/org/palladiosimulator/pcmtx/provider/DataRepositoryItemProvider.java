@@ -13,14 +13,10 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
 
 import org.palladiosimulator.pcmtx.DataRepository;
 import org.palladiosimulator.pcmtx.PcmtxFactory;
@@ -32,14 +28,7 @@ import org.palladiosimulator.pcmtx.PcmtxPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DataRepositoryItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+public class DataRepositoryItemProvider extends EntityItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -115,7 +104,10 @@ public class DataRepositoryItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_DataRepository_type");
+		String label = ((DataRepository)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_DataRepository_type") :
+			getString("_UI_DataRepository_type") + " " + label;
 	}
 	
 

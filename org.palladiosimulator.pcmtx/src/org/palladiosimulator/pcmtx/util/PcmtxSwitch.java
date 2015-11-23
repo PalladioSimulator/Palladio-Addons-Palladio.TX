@@ -94,18 +94,27 @@ public class PcmtxSwitch<T> extends Switch<T> {
 			case PcmtxPackage.DATA_REPOSITORY: {
 				DataRepository dataRepository = (DataRepository)theEObject;
 				T result = caseDataRepository(dataRepository);
+				if (result == null) result = caseEntity(dataRepository);
+				if (result == null) result = caseIdentifier(dataRepository);
+				if (result == null) result = caseNamedElement(dataRepository);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PcmtxPackage.TABLE: {
 				Table table = (Table)theEObject;
 				T result = caseTable(table);
+				if (result == null) result = caseEntity(table);
+				if (result == null) result = caseIdentifier(table);
+				if (result == null) result = caseNamedElement(table);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PcmtxPackage.DATABASE: {
 				Database database = (Database)theEObject;
 				T result = caseDatabase(database);
+				if (result == null) result = caseEntity(database);
+				if (result == null) result = caseIdentifier(database);
+				if (result == null) result = caseNamedElement(database);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

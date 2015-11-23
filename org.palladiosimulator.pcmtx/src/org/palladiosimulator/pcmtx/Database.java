@@ -4,6 +4,8 @@ package org.palladiosimulator.pcmtx;
 
 import org.eclipse.emf.ecore.EObject;
 
+import org.palladiosimulator.pcm.core.entity.Entity;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Database</b></em>'.
@@ -21,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Database extends EObject {
+public interface Database extends EObject, Entity {
 	/**
 	 * Returns the value of the '<em><b>Isolation</b></em>' attribute.
 	 * The default value is <code>"READ_COMMITTED"</code>.

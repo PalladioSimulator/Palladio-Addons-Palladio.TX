@@ -8,6 +8,8 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
+import org.palladiosimulator.pcm.core.entity.EntityPackage;
+
 import org.palladiosimulator.pcm.resourcetype.ResourcetypePackage;
 
 import org.palladiosimulator.pcm.seff.SeffPackage;
@@ -135,13 +137,31 @@ public interface PcmtxPackage extends EPackage {
 	int DATA_REPOSITORY = 1;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_REPOSITORY__ID = EntityPackage.ENTITY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_REPOSITORY__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
+
+	/**
 	 * The feature id for the '<em><b>Table</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_REPOSITORY__TABLE = 0;
+	int DATA_REPOSITORY__TABLE = EntityPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Databases</b></em>' containment reference list.
@@ -150,7 +170,7 @@ public interface PcmtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_REPOSITORY__DATABASES = 1;
+	int DATA_REPOSITORY__DATABASES = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Data Repository</em>' class.
@@ -159,7 +179,7 @@ public interface PcmtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_REPOSITORY_FEATURE_COUNT = 2;
+	int DATA_REPOSITORY_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcmtx.impl.TableImpl <em>Table</em>}' class.
@@ -172,13 +192,31 @@ public interface PcmtxPackage extends EPackage {
 	int TABLE = 2;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__ID = EntityPackage.ENTITY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
+
+	/**
 	 * The feature id for the '<em><b>Rows</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE__ROWS = 0;
+	int TABLE__ROWS = EntityPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Types</b></em>' reference list.
@@ -187,7 +225,7 @@ public interface PcmtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE__TYPES = 1;
+	int TABLE__TYPES = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Database</b></em>' reference.
@@ -196,7 +234,7 @@ public interface PcmtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE__DATABASE = 2;
+	int TABLE__DATABASE = EntityPackage.ENTITY_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Table</em>' class.
@@ -205,7 +243,7 @@ public interface PcmtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_FEATURE_COUNT = 3;
+	int TABLE_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcmtx.impl.DatabaseImpl <em>Database</em>}' class.
@@ -218,13 +256,31 @@ public interface PcmtxPackage extends EPackage {
 	int DATABASE = 3;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATABASE__ID = EntityPackage.ENTITY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATABASE__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
+
+	/**
 	 * The feature id for the '<em><b>Isolation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE__ISOLATION = 0;
+	int DATABASE__ISOLATION = EntityPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Timeout</b></em>' attribute.
@@ -233,7 +289,7 @@ public interface PcmtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE__TIMEOUT = 1;
+	int DATABASE__TIMEOUT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Database</em>' class.
@@ -242,7 +298,7 @@ public interface PcmtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE_FEATURE_COUNT = 2;
+	int DATABASE_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcmtx.impl.CommitActionImpl <em>Commit Action</em>}' class.

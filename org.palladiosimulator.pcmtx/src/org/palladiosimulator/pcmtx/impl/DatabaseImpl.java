@@ -7,7 +7,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
 
 import org.palladiosimulator.pcmtx.Database;
 import org.palladiosimulator.pcmtx.PcmtxPackage;
@@ -27,7 +28,7 @@ import org.palladiosimulator.pcmtx.TransactionIsolation;
  *
  * @generated
  */
-public class DatabaseImpl extends MinimalEObjectImpl.Container implements Database {
+public class DatabaseImpl extends EntityImpl implements Database {
 	/**
 	 * The default value of the '{@link #getIsolation() <em>Isolation</em>}' attribute.
 	 * <!-- begin-user-doc -->
