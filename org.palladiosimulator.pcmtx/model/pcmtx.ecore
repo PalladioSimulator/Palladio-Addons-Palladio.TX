@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="pcmtx" nsURI="http://palladiosimulator.org/PalladioComponentModel/Transactional/1.0"
+    nsPrefix="pcmtx">
+  <eClassifiers xsi:type="ecore:EClass" name="EntityType" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//resourcetype/ResourceType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataRepository">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="table" upperBound="-1"
+        eType="#//Table" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="databases" upperBound="-1"
+        eType="#//Database" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Table">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rows" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="types" lowerBound="1" upperBound="-1"
+        eType="#//EntityType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="database" lowerBound="1"
+        eType="#//Database"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Database">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isolation" eType="#//TransactionIsolation"
+        defaultValueLiteral="READ_COMMITTED"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeout" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TransactionIsolation">
+    <eLiterals name="SERIALIZABLE"/>
+    <eLiterals name="READ_COMMITTED" value="1"/>
+    <eLiterals name="READ_UNCOMMITTED" value="2"/>
+    <eLiterals name="VERSIONING" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TransactionScope">
+    <eLiterals name="JOIN"/>
+    <eLiterals name="NEW" value="1"/>
+    <eLiterals name="MANUAL" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CommitAction" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//seff/AbstractInternalControlFlowAction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbortAction" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//seff/AbstractInternalControlFlowAction"/>
+</ecore:EPackage>

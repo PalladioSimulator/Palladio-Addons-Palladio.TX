@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated pcmtx -->
+      <factory
+            uri="http://palladiosimulator.org/PalladioComponentModel/Transactional/1.0"
+            class="org.palladiosimulator.pcmtx.provider.PcmtxItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated pcmtx -->
+      <extender
+            uri="http://palladiosimulator.org/PalladioComponentModel/ResourceType/5.1"
+            class="org.palladiosimulator.pcmtx.provider.PcmtxItemProviderAdapterFactory$ResourcetypeChildCreationExtender"/>
+      <extender
+            uri="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.1"
+            class="org.palladiosimulator.pcmtx.provider.PcmtxItemProviderAdapterFactory$SeffChildCreationExtender"/>
+      <extender
+            uri="http://palladiosimulator.org/PalladioComponentModel/SEFF/SEFF_Reliability/5.1"
+            class="org.palladiosimulator.pcmtx.provider.PcmtxItemProviderAdapterFactory$SeffReliabilityChildCreationExtender"/>
+   </extension>
+
+</plugin>
