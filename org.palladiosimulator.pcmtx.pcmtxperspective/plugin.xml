@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.palladiosimulator.pcmtx.pcmtxperspective.perspective">
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="org.palladiosimulator.pcmtx.pcmtxperspective.PCMTXPerspectiveFactory"
+            id="org.palladiosimulator.pcmtx.pcmtxperspective.perspective"
+            name="PCM.TX">
+      </perspective>
+   </extension>
+
+</plugin>

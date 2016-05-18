@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+         
+         <category
+            name="PCMTX"
+            id="org.palladiosimulator.pcmtx.pcmtxviews">
+	      </category>
+	      <view
+	            name="PCMTX Tables View"
+	            category="org.palladiosimulator.pcmtx.pcmtxviews"
+	            class="org.palladiosimulator.pcmtx.pcmtxviews.views.TablesView"
+	            id="org.palladiosimulator.pcmtx.pcmtxviews.views.TablesView">
+	      </view>
+	      <view
+	            name="PCMTX Entity Types View"
+	            category="org.palladiosimulator.pcmtx.pcmtxviews"
+	            class="org.palladiosimulator.pcmtx.pcmtxviews.views.EntityTypesView"
+	            id="org.palladiosimulator.pcmtx.pcmtxviews.views.EntityTypesView">
+	      </view>
+	      <view
+	            name="PCMTX Databases View"
+	            category="org.palladiosimulator.pcmtx.pcmtxviews"
+	            class="org.palladiosimulator.pcmtx.pcmtxviews.views.DatabasesView"
+	            id="org.palladiosimulator.pcmtx.pcmtxviews.views.DatabasesView">
+	      </view>
+   </extension>
+
+</plugin>
