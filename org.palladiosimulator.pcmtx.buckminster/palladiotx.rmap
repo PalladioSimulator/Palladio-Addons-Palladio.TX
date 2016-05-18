@@ -3,6 +3,7 @@
   <rm:locator pattern="^org\.palladiosimulator\.pcmtx.*" searchPathRef="Palladio.TX" failOnError="false"/>
   <rm:locator pattern="^org\.eclipse.*" searchPathRef="EclipseMars"/>
   <rm:locator pattern="^org\.modelversioning.*" searchPathRef="EMFProfiles"/>
+  <rm:redirect pattern=".*" href="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/Palladio/Analyzer/SimuCom/trunk/org.palladiosimulator.simucom.buckminster/simucom.rmap"/>
   <rm:searchPath name="Palladio.TX">
     <rm:provider componentTypes="eclipse.feature,osgi.bundle" readerType="svn">
       <rm:uri format="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/Palladio/Addons/Palladio.TX/trunk/{0}">
