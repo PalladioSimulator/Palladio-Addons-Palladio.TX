@@ -14,4 +14,11 @@
            profile_resource="profile.emfprofile_diagram">
      </profile>
   </extension>
+  <extension
+     point="org.eclipse.emf.ecore.uri_mapping">
+    <mapping
+       source="pathmap://PCMTX_MODELS/"
+       target="platform:/plugin/org.palladiosimulator.pcmtx.profile/">
+    </mapping>    
+  </extension>
 </plugin>
