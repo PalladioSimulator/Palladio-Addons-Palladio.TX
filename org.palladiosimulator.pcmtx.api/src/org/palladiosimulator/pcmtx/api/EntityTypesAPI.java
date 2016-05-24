@@ -86,7 +86,7 @@ public class EntityTypesAPI {
 	 */
 	public static ResourceSignature findSignatureByAccessType(ResourceInterface iface, EntityAccessType accessType) {
 		for (ResourceSignature s : iface.getResourceSignatures__ResourceInterface()) {
-			EntityAccessType type = EntityAccessType.from(s.getResourceInterface__ResourceSignature().getEntityName());
+			EntityAccessType type = EntityAccessType.from(s.getEntityName());
 			if (type != null && type == accessType) {
 				return s;
 			}
