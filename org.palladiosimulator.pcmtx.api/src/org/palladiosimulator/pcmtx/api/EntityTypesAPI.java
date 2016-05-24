@@ -76,4 +76,22 @@ public class EntityTypesAPI {
 		return roles.get(0).getProvidedResourceInterface__ResourceProvidedRole();
 	}
 
+	/**
+	 * @param iface
+	 *            the interface to be examined
+	 * @param accessType
+	 *            the access type
+	 * @return the resource signature that matches the given access type, or {@code null} if no such signature could be
+	 *         found in the specified interface.
+	 */
+	public static ResourceSignature findSignatureByAccessType(ResourceInterface iface, EntityAccessType accessType) {
+		for (ResourceSignature s : iface.getResourceSignatures__ResourceInterface()) {
+			EntityAccessType type = EntityAccessType.from(s.getResourceInterface__ResourceSignature().getEntityName());
+			if (type != null && type == accessType) {
+				return s;
+			}
+		}
+		return null; // no suitable signature found
+	}
+
 }
