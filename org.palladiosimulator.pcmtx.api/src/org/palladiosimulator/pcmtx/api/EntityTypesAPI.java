@@ -1,5 +1,7 @@
 package org.palladiosimulator.pcmtx.api;
 
+import java.util.List;
+
 import org.palladiosimulator.pcm.core.entity.EntityFactory;
 import org.palladiosimulator.pcm.core.entity.ResourceProvidedRole;
 import org.palladiosimulator.pcm.resourcetype.ResourceInterface;
@@ -11,9 +13,12 @@ import org.palladiosimulator.pcmtx.PcmtxFactory;
 
 public class EntityTypesAPI {
 
-	private static final String PROVIDED_ROLE_SUFFIX = "ProvidedRole";
+	public static final String PROVIDED_ROLE_SUFFIX = "ProvidedRole";
 
-	private static final String RESOURCE_INTERFACE_PREFIX = "I";
+	public static final String RESOURCE_INTERFACE_PREFIX = "I";
+
+	public static final EntityAccessType[] DEFAULT_ACCESS_TYPES = new EntityAccessType[] { EntityAccessType.READ,
+			EntityAccessType.INSERT, EntityAccessType.UPDATE };
 
 	public static ResourceRepository createEmptyRepository() {
 		return ResourcetypeFactory.eINSTANCE.createResourceRepository();
@@ -26,10 +31,11 @@ public class EntityTypesAPI {
 	 *            the repository in which the entity type is to be created
 	 */
 	public static EntityType createEntityType(ResourceRepository repository, String name) {
-		return createEntityType(repository, name, new String[] { "SELECT", "UPDATE", "INSERT" }); // TODO
+		return createEntityType(repository, name, DEFAULT_ACCESS_TYPES);
 	}
 
-	public static EntityType createEntityType(ResourceRepository repository, String name, String... operations) {
+	public static EntityType createEntityType(ResourceRepository repository, String name,
+			EntityAccessType... accessTypes) {
 		// add entity type to the repository
 		EntityType entityType = PcmtxFactory.eINSTANCE.createEntityType();
 		entityType.setResourceRepository_ResourceType(repository);
@@ -42,10 +48,10 @@ public class EntityTypesAPI {
 
 		// add resource signature to the interface
 		int resourceServiceId = 1;
-		for (String op : operations) {
+		for (EntityAccessType accessType : accessTypes) {
 			ResourceSignature signature = ResourcetypeFactory.eINSTANCE.createResourceSignature();
 			signature.setResourceInterface__ResourceSignature(iface);
-			signature.setEntityName(op);
+			signature.setEntityName(accessType.getName());
 			signature.setResourceServiceId(resourceServiceId++);
 		}
 
@@ -56,6 +62,18 @@ public class EntityTypesAPI {
 		providedRole.setProvidedResourceInterface__ResourceProvidedRole(iface);
 
 		return entityType;
+	}
+
+	/**
+	 * @return the resource interface provided by the specified entity type. By convention, each entity type provides
+	 *         exactly one resource interface.
+	 */
+	public static ResourceInterface getProvidedInterface(EntityType entityType) {
+		List<ResourceProvidedRole> roles = entityType.getResourceProvidedRoles__ResourceInterfaceProvidingEntity();
+		if (roles.isEmpty()) {
+			return null;
+		}
+		return roles.get(0).getProvidedResourceInterface__ResourceProvidedRole();
 	}
 
 }
