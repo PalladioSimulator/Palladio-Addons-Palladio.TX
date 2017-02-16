@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="edu.kit.ipd.sdq.eventsim.module">
+      <simulation_module
+            entry_point="org.palladiosimulator.transactions.TransactionSimulationModel"
+            guice_module="org.palladiosimulator.transactions.TransactionSimulatorModule"
+            id="org.palladiosimulator.transactions.module"
+            launch_contribution="org.palladiosimulator.transactions.launch.TransactionsLaunchContribution"
+            name="Transactions Simulator"
+            priority="10">
+         <simulation_strategy
+               action="org.palladiosimulator.pcm.seff.StartAction"
+               name="TX Start Action"
+               strategy="org.palladiosimulator.transactions.strategies.TXStartActionSimulationStrategy">
+         </simulation_strategy>
+         <simulation_strategy
+               action="org.palladiosimulator.pcm.seff.InternalAction"
+               name="TX Internal Action"
+               strategy="org.palladiosimulator.transactions.strategies.TXInternalActionSimulationStrategy">
+         </simulation_strategy>
+         <simulation_strategy
+               action="org.palladiosimulator.pcm.seff.StopAction"
+               name="TX Stop Action"
+               strategy="org.palladiosimulator.transactions.strategies.TXStopActionSimulationStrategy">
+         </simulation_strategy>
+      </simulation_module>
+   </extension>
+   <extension
+         point="edu.kit.ipd.sdq.eventsim.rvisualization.metriclabels">
+      <metric
+            label="[Transaction] Locked Table Rows"
+            name="LOCK_COUNT_TOTAL">
+      </metric>
+      <metric
+            label="[Transaction] Lock Waiting Queue Length (Mean)"
+            name="LOCK_WAITING_MEAN">
+      </metric>
+      <metric
+            label="[Transaction] Transaction Commits"
+            name="TRANSACTION_COMMIT">
+      </metric>
+      <metric
+            label="[Transaction] Transaction Rollbacks"
+            name="TRANSACTION_ROLLBACK">
+      </metric>
+   </extension>
+
+</plugin>
