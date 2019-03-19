@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Random Utils
+Bundle-SymbolicName: edu.kit.ipd.sdq.randomutils
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: de.uka.ipd.sdq.probfunction.math;bundle-version="2.0.2",
+ org.apache.commons.math3;bundle-version="3.6.1",
+ org.apache.commons.lang3;bundle-version="3.1.0",
+ de.uka.ipd.sdq.stoex;bundle-version="2.2.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.antlr.runtime
+Export-Package: edu.kit.ipd.sdq.randomutils,
+ edu.kit.ipd.sdq.randomutils.factories
+Bundle-ClassPath: .

@@ -21,6 +21,7 @@
 		<module>org.palladiosimulator.pcmtx.profile</module>
 		<module>org.palladiosimulator.transactions</module>
 		<module>org.palladiosimulator.transactions.ccsim</module>
+		<module>edu.kit.ipd.sdq.randomutils</module>
 	</modules>
 	
 </project>
