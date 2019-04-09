@@ -167,10 +167,12 @@
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release" refresh="true">
 <unit id="org.jgrapht.feature.feature.group" version="1.3.0"/>
+<unit id="org.jgrapht.io.feature.feature.group" version="1.3.0"/>
 <repository location="https://sdqweb.ipd.kit.edu/eclipse/palladio/thirdparty/thirdpartylibrary/releases/latest/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly" refresh="true">
 <unit id="org.jgrapht.feature.feature.group" version="1.3.0"/>
+<unit id="org.jgrapht.io.feature.feature.group" version="1.3.0"/>
 <repository location="https://sdqweb.ipd.kit.edu/eclipse/palladio/thirdparty/thirdpartylibrary/nightly/"/>
 </location>
 </locations>

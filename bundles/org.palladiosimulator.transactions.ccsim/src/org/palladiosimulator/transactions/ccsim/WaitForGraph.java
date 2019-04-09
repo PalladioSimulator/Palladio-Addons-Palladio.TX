@@ -5,16 +5,16 @@ import java.io.Writer;
 import java.util.Iterator;
 import java.util.Set;
 
-import org.jgrapht.DirectedGraph;
-import org.jgrapht.alg.CycleDetector;
-import org.jgrapht.ext.DOTExporter;
-import org.jgrapht.ext.VertexNameProvider;
+import org.jgrapht.Graph;
+import org.jgrapht.alg.cycle.CycleDetector;
 import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
+import org.jgrapht.io.ComponentNameProvider;
+import org.jgrapht.io.DOTExporter;
 
 public class WaitForGraph {
 
-    private DirectedGraph<ITransaction, DefaultEdge> graph;
+    private Graph<ITransaction, DefaultEdge> graph;
 
     public WaitForGraph() {
         graph = new DefaultDirectedGraph<ITransaction, DefaultEdge>(DefaultEdge.class);
@@ -89,16 +89,16 @@ public class WaitForGraph {
     }
 
     public String toDOT() {
-        VertexNameProvider<ITransaction> vertexIdProvider = new VertexNameProvider<ITransaction>() {
+        ComponentNameProvider<ITransaction> vertexIdProvider = new ComponentNameProvider<ITransaction>() {
             @Override
-            public String getVertexName(ITransaction tx) {
+            public String getName(ITransaction tx) {
                 return Integer.toString(tx.getId());
             }
         };
 
         DOTExporter<ITransaction, DefaultEdge> exporter = new DOTExporter<>(vertexIdProvider, null, null);
         Writer writer = new StringWriter();
-        exporter.export(writer, graph);
+        exporter.exportGraph(graph, writer);
         return writer.toString();
     }
 

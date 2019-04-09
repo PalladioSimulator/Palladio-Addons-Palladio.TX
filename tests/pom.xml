@@ -13,7 +13,6 @@
 	
 	<modules>
 		<module>org.palladiosimulator.pcmtx.ccsim.tests</module>
-		<module>org.palladiosimulator.pcmtx.tests</module>
 	</modules>
 	
 </project>
