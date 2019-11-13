@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Ccsim
 Bundle-SymbolicName: org.palladiosimulator.transactions.ccsim;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.palladiosimulator.transactions.ccsim,
  org.palladiosimulator.transactions.ccsim.listener
 Require-Bundle: org.palladiosimulator.pcmtx;bundle-version="0.1.0",

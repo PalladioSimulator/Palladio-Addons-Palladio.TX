@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Palladio.TX API
 Bundle-SymbolicName: org.palladiosimulator.pcmtx.api
 Bundle-Version: 1.0.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Bundle: org.palladiosimulator.pcm;bundle-version="4.0.0",
  org.palladiosimulator.pcmtx;bundle-version="0.1.0"
 Export-Package: org.palladiosimulator.pcmtx.api

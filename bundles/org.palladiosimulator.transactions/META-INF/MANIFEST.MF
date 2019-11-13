@@ -24,7 +24,7 @@ Require-Bundle: org.eclipse.core.runtime,
  edu.kit.ipd.sdq.eventsim.rvisualization,
  edu.kit.ipd.sdq.eventsim.measurement.r,
  org.rosuda.rJavaAndRserve
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.palladiosimulator.transactions,
  org.palladiosimulator.transactions.entities,
  org.palladiosimulator.transactions.launch,
