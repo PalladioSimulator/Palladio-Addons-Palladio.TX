@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Palladio.TX Transaction Simulator
 Bundle-SymbolicName: org.palladiosimulator.transactions;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 4.2.0.qualifier
 Bundle-Activator: org.palladiosimulator.transactions.Activator
 Require-Bundle: org.eclipse.core.runtime,
  edu.kit.ipd.sdq.eventsim.core,
@@ -15,10 +15,10 @@ Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.mdsdprofiles.api;bundle-version="1.0.0",
  org.palladiosimulator.mdsdprofiles;bundle-version="1.0.0",
  de.uka.ipd.sdq.simulation.abstractsimengine;bundle-version="1.0.0",
- org.palladiosimulator.pcmtx;bundle-version="0.1.0",
+ org.palladiosimulator.pcmtx;bundle-version="4.2.0",
  edu.kit.ipd.sdq.eventsim.api,
- edu.kit.ipd.sdq.randomutils;bundle-version="1.0.0",
- org.palladiosimulator.transactions.ccsim;bundle-version="1.0.0",
+ edu.kit.ipd.sdq.randomutils;bundle-version="4.2.0",
+ org.palladiosimulator.transactions.ccsim;bundle-version="4.2.0",
  edu.kit.ipd.sdq.eventsim.measurement,
  edu.kit.ipd.sdq.eventsim.measurement.osgi,
  edu.kit.ipd.sdq.eventsim.rvisualization,

@@ -2,10 +2,10 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: PCMTX
 Bundle-SymbolicName: org.palladiosimulator.pcmtx.pcmtxperspective;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 4.2.0.qualifier
 Bundle-Activator: org.palladiosimulator.pcmtx.pcmtxperspective.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- org.palladiosimulator.pcmtx.pcmtxviews;bundle-version="1.0.0"
+ org.palladiosimulator.pcmtx.pcmtxviews;bundle-version="4.2.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ActivationPolicy: lazy
