@@ -2,12 +2,12 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Ccsim
 Bundle-SymbolicName: org.palladiosimulator.transactions.ccsim;singleton:=true
-Bundle-Version: 4.2.0.qualifier
+Bundle-Version: 4.3.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.palladiosimulator.transactions.ccsim,
  org.palladiosimulator.transactions.ccsim.listener
-Require-Bundle: org.palladiosimulator.pcmtx;bundle-version="4.2.0",
- edu.kit.ipd.sdq.randomutils;bundle-version="4.2.0",
+Require-Bundle: org.palladiosimulator.pcmtx;bundle-version="4.3.0",
+ edu.kit.ipd.sdq.randomutils;bundle-version="4.3.0",
  org.jgrapht.core;bundle-version="1.3.0",
  edu.kit.ipd.sdq.eventsim.api,
  org.jgrapht.io;bundle-version="1.3.0"
