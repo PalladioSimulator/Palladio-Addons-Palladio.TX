@@ -1,10 +1,6 @@
 package edu.kit.ipd.sdq.randomutils;
 
-import org.antlr.runtime.RecognitionException;
-
 import de.uka.ipd.sdq.probfunction.math.IProbabilityDensityFunction;
-import de.uka.ipd.sdq.probfunction.math.ManagedPDF;
-import de.uka.ipd.sdq.probfunction.math.exception.StringNotPDFException;
 
 public class StoExRandomVariable implements RandomVariable<Double> {
 
@@ -12,10 +8,8 @@ public class StoExRandomVariable implements RandomVariable<Double> {
 
 	public StoExRandomVariable(String stoEx) {
 		try {
-			pdf = ManagedPDF.createFromString(stoEx).getPdfTimeDomain();
+			pdf = ManagedPDFParser.createFromString(stoEx).getPdfTimeDomain();
 		} catch (StringNotPDFException e) {
-			throw new RuntimeException(e);
-		} catch (RecognitionException e) {
 			throw new RuntimeException(e);
 		}
 	}
@@ -37,10 +31,8 @@ public class StoExRandomVariable implements RandomVariable<Double> {
 
 		IProbabilityDensityFunction pdf = null;
 		try {
-			pdf = ManagedPDF.createFromString(stoExBuilder.toString()).getPdfTimeDomain();
+			pdf = ManagedPDFParser.createFromString(stoExBuilder.toString()).getPdfTimeDomain();
 		} catch (StringNotPDFException e) {
-			throw new RuntimeException(e);
-		} catch (RecognitionException e) {
 			throw new RuntimeException(e);
 		}
 		pdf = pdf.shiftDomain(minValue); // calculates pdf + minValue
