@@ -11,7 +11,6 @@ Require-Bundle: org.eclipse.core.runtime,
  de.uka.ipd.sdq.workflow.launchconfig,
  org.palladiosimulator.pcm;bundle-version="4.0.0",
  edu.kit.ipd.sdq.eventsim.system;bundle-version="2.0.0",
- com.google.inject.guice;bundle-version="4.0.0",
  org.palladiosimulator.mdsdprofiles.api;bundle-version="1.0.0",
  org.palladiosimulator.mdsdprofiles;bundle-version="1.0.0",
  de.uka.ipd.sdq.simulation.abstractsimengine;bundle-version="1.0.0",
@@ -30,3 +29,5 @@ Export-Package: org.palladiosimulator.transactions,
  org.palladiosimulator.transactions.launch,
  org.palladiosimulator.transactions.strategies
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: org.palladiosimulator.transactions
+Import-Package: com.google.inject
