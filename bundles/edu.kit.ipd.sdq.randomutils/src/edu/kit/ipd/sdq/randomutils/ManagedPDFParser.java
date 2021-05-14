@@ -1,7 +1,8 @@
 package edu.kit.ipd.sdq.randomutils;
 
+import java.text.ParseException;
+
 import org.palladiosimulator.pcm.stoex.api.StoExParser;
-import org.palladiosimulator.pcm.stoex.api.StoExParser.SyntaxErrorException;
 
 import de.uka.ipd.sdq.probfunction.ProbabilityDensityFunction;
 import de.uka.ipd.sdq.probfunction.ProbabilityMassFunction;
@@ -37,7 +38,7 @@ public final class ManagedPDFParser {
         Expression parsedStoEx;
         try {
             parsedStoEx = STOEX_PARSER.parse(s);
-        } catch (SyntaxErrorException e) {
+        } catch (ParseException e) {
             throw new StringNotPDFException(e.getMessage());
         }
 
